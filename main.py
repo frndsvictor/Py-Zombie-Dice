@@ -83,15 +83,6 @@ while True:
     print("SCORE ATUAL: ");
     print("CÉREBROS: ", cerebros);
     print("TIROS: ", tiros);
-#Exibe aviso na tela dando a opção de o jogador atual continuar rodando os dados
-    continuarTurno = ( input ("AVISO: Você deseja continuar jogando dados? (s=sim / n=não):") );
-#Caso selecione que não quer continuar, a vez passa para o próximo jogador
-    if continuarTurno == "n":
-        jogadorAtual = jogadorAtual + 1;
-        dadosSorteados = [];
-        tiros = 0;
-        cerebros = 0;
-        passos = 0;
 #Função verifica se o player ganhou ou perdeu e exibe texto comemorativo
 #Se o número de cerebros for maior que 12, o jogador atual ganha e o jogo exibe input para sair
     if (cerebros > 12):
@@ -111,6 +102,15 @@ while True:
                 if not fechar:
                     print("Saindo do programa.")
                 exit()
+#Exibe aviso na tela dando a opção de o jogador atual continuar rodando os dados
+    continuarTurno = ( input ("AVISO: Você deseja continuar jogando dados? (s=sim / n=não):") );
+#Caso selecione que não quer continuar, a vez passa para o próximo jogador
+    if continuarTurno == "n":
+        jogadorAtual = jogadorAtual + 1;
+        dadosSorteados = [];
+        tiros = 0;
+        cerebros = 0;
+        passos = 0;
 #Se os jogadores decidirem por continuar rodando os dados, o jogo continua
     else:
         print("Iniciando mais uma rodada do turno atual");
